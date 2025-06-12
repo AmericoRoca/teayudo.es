@@ -1,90 +1,74 @@
 import React from 'react'
-import {
-  CodeIcon,
-  ServerIcon,
-  LayoutIcon,
-  DatabaseIcon,
-  BrainIcon,
-  GlobeIcon,
-} from 'lucide-react'
+
 export const Skills = () => {
-  const skills = [
-    {
-      title: 'Frontend Development',
-      icon: <LayoutIcon size={36} />,
-      description:
-        'Creating responsive, accessible, and performant user interfaces with modern frameworks and tools.',
-      techs: ['React', 'TypeScript', 'Tailwind CSS', 'Three.js'],
-    },
-    {
-      title: 'Backend Development',
-      icon: <ServerIcon size={36} />,
-      description:
-        'Building robust server-side applications with efficient APIs and services.',
-      techs: ['Node.js', 'Express', 'RESTful APIs', 'GraphQL'],
-    },
-    {
-      title: 'Database Management',
-      icon: <DatabaseIcon size={36} />,
-      description:
-        'Designing and optimizing database structures for performance and scalability.',
-      techs: ['MongoDB', 'PostgreSQL', 'Redis', 'Firebase'],
-    },
-    {
-      title: 'Web Performance',
-      icon: <GlobeIcon size={36} />,
-      description:
-        'Optimizing web applications for speed, accessibility, and user experience.',
-      techs: ['Lazy Loading', 'Code Splitting', 'Performance Metrics', 'SEO'],
-    },
-    {
-      title: 'Problem Solving',
-      icon: <BrainIcon size={36} />,
-      description:
-        'Analyzing complex problems and developing elegant, efficient solutions.',
-      techs: ['Algorithms', 'Data Structures', 'System Design', 'Debugging'],
-    },
-    {
-      title: 'Clean Code',
-      icon: <CodeIcon size={36} />,
-      description:
-        'Writing maintainable, well-documented, and testable code following best practices.',
-      techs: ['SOLID Principles', 'Design Patterns', 'Code Reviews', 'Testing'],
-    },
-  ]
   return (
-    <section id="skills" className="!py-20 bg-zinc-900 w-full">
-      <div className="container mx-auto px-6">
-        <div className="mb-16 text-center">
-          <h2 className="!text-3xl !md:text-5xl !font-bold !mb-4">
-            Technical Skills
-          </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            My expertise spans across various technologies and methodologies,
-            allowing me to tackle diverse challenges in software development.
-          </p>
+    <section className="my-20 py-20 bg-[#FEF6F1] font-poppins">
+      <div className="max-w-6xl mx-auto px-4">
+        {/* Encabezado en Grid */}
+        <div className="grid grid-cols-3 gap-x-2 gap-y-3 mb-10">
+          {/* Título (col-span-2) */}
+          <div className="col-span-2 flex flex-col items-end text-right pr-4">
+            <h2 className="text-[#C4796C] text-base font-bold tracking-widest mb-1">
+              SERVICIOS
+            </h2>
+            <p className="text-[#86786F] text-xl font-light leading-tight">
+              QUE OFRECEMOS<br />EN EL CENTRO
+            </p>
+          </div>
+
+          {/* Semicírculo esquina superior derecha */}
+          <div className="w-28 h-28 bg-[#E7D7C4] rounded-tr-full rounded-br-full flex items-center justify-center p-3 text-center">
+            <h2 className="text-xs font-medium text-[#86786F]">
+              PSICOLOGÍA<br />INFANTOJUVENIL <br />›
+            </h2>
+          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="bg-black !p-8 rounded-lg border border-zinc-800 hover:border-white/30 transition-all duration-300"
-            >
-              <div className="mb-4 text-gray-300">{skill.icon}</div>
-              <h3 className="text-xl font-bold mb-3">{skill.title}</h3>
-              <p className="text-gray-400 mb-4">{skill.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {skill.techs.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className="px-3 py-1 bg-zinc-800 rounded-full text-sm text-gray-300"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
+
+        {/* Grid de 3x3 bloques */}
+        <div className="grid grid-cols-3 gap-x-6 gap-y-10">
+          {/* Círculo */}
+          <div className="w-28 h-28 bg-[#E7D7C4] rounded-full flex items-center justify-center p-3 text-center">
+            <h2 className="text-xs font-medium text-[#86786F] leading-tight">
+              REEDUCACIÓN<br />PSICOPEDAGÓGICA <br />›
+            </h2>
+          </div>
+
+          {/* Triángulo */}
+          <div className="relative w-28 h-28 flex items-center justify-center">
+            <div className="w-0 h-0 border-l-[60px] border-r-[60px] border-t-[100px] border-l-transparent border-r-transparent border-t-[#E7D7C4]"></div>
+            <h2 className="absolute top-16 text-xs font-medium text-[#86786F] text-center leading-tight">
+              TERAPIA<br />FAMILIAR <br />›
+            </h2>
+          </div>
+
+          {/* Cuadro rojo */}
+          <div className="w-28 h-28 bg-[#E7D7C4] flex flex-col items-center justify-center text-center p-4 text-white">
+            <h2 className="text-xs font-semibold mb-2 leading-tight">
+              PSICOLOGÍA PERINATAL
+              <br />›
+            </h2>
+          </div>
+
+          {/* Cuadro normal */}
+          <div className="w-28 h-28 bg-[#E7D7C4] flex items-center justify-center p-3 text-center">
+            <h2 className="text-xs font-medium text-[#86786F] leading-tight">
+              ASESORAMIENTO<br />EN LA CRIANZA <br />›
+            </h2>
+          </div>
+
+          {/* Semicírculo arriba (logopedia) */}
+          <div className="w-28 h-28 bg-[#E7D7C4] rounded-full rounded-b-none flex items-center justify-center p-3 text-center">
+            <h2 className="text-xs font-medium text-[#86786F] leading-tight">
+              LOGOPEDIA <br />›
+            </h2>
+          </div>
+
+          {/* Círculo */}
+          <div className="w-28 h-28 bg-[#E7D7C4] rounded-full flex items-center justify-center p-3 text-center">
+            <h2 className="text-xs font-medium text-[#86786F] leading-tight">
+              YOGA &<br />MINDFULNESS <br />›
+            </h2>
+          </div>
         </div>
       </div>
     </section>

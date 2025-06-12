@@ -5,10 +5,12 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 export const Contact = () => {
   const socialLinks = {
-    whatsapp: "https://api.whatsapp.com/send/?phone=34601866199&text=Hola%2C+Centro+Te+Ayudo.+Mi+nombre+es+%5Bnombre+paciente%5D.+Me+gustar%C3%ADa+agendar+una+consulta+con+ustedes+porque+estoy+pasando+por+%5Buna+breve+descripci%C3%B3n+opcional%5D.+%C2%BFPodr%C3%ADan+darme+mas+informaci%C3%B3n%3F%0D%0A%0D%0AGracias+de+antemano+por+su+atenci%C3%B3n.+Quedo+atento%2Fa+a+su+respuesta.&type=phone_number&app_absent=0",
+    whatsapp:
+      "https://api.whatsapp.com/send/?phone=34601866199&text=Hola%2C+Centro+Te+Ayudo.+Mi+nombre+es+%5Bnombre+paciente%5D.+Me+gustar%C3%ADa+agendar+una+consulta+con+ustedes+porque+estoy+pasando+por+%5Buna+breve+descripci%C3%B3n+opcional%5D.+%C2%BFPodr%C3%ADan+darme+mas+informaci%C3%B3n%3F%0D%0A%0D%0AGracias+de+antemano+por+su+atenci%C3%B3n.+Quedo+atento%2Fa+a+su+respuesta.&type=phone_number&app_absent=0",
     instagram: "",
-    linkedin: "https://www.linkedin.com/company/centroteayudojerez/?viewAsMember=true",
-    facebook: "https://www.facebook.com/profile.php?id=61577033498767"
+    linkedin:
+      "https://www.linkedin.com/company/centroteayudojerez/?viewAsMember=true",
+    facebook: "https://www.facebook.com/profile.php?id=61577033498767",
   };
 
   const SITE_KEY = "6Lfxx0wrAAAAALxvV0UDxBBob9sK76pfXjGI8BBm";
@@ -60,8 +62,9 @@ export const Contact = () => {
             Contacto
           </h2>
           <p className="!text-[#D0B59A] text-lg max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? Feel free to reach
-            out and let's create something amazing together.
+           Si tienes dudas, quieres concertar una cita o simplemente necesitas orientación, estamos aquí para ayudarte. En nuestro centro de psicología infantojuvenil, ofrecemos un espacio de escucha, comprensión y acompañamiento tanto para niños y adolescentes como para sus familias.
+
+Escríbenos sin compromiso y te responderemos lo antes posible.
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -86,7 +89,9 @@ export const Contact = () => {
                   <PhoneIcon size={24} className="text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg !font-bold !text-[#D0B59A]">Teléfono</h3>
+                  <h3 className="text-lg !font-bold !text-[#D0B59A]">
+                    Teléfono
+                  </h3>
                   <a
                     href="tel:+34744729453"
                     className="!text-[#D0B59A] hover:text-white transition-colors"
@@ -101,29 +106,35 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg !font-bold !text-[#D0B59A]">Calle</h3>
-                  <p className="text-[#D0B59A]">Avenida Alcalde Jesus Mantaras, 5</p>
+                  <p className="text-[#D0B59A]">
+                    Avenida Alcalde Jesus Mantaras, 5
+                  </p>
                 </div>
               </div>
             </div>
             <div className="mt-12">
-              <h3 className="text-xl !font-bold mb-4 !text-[#D0B59A]">Siguenos en nuestras redes sociales</h3>
+              <h3 className="text-xl !font-bold mb-4 !text-[#D0B59A]">
+                Siguenos en nuestras redes sociales
+              </h3>
               <div className="flex gap-4">
-                {["facebook", "linkedin", "whatsapp", "instagram"].map((platform) => (
-                  <a
-                    key={platform}
-                    href={socialLinks[platform]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-[#D37466] rounded-full hover:bg-[#D0B59A] transition-colors"
-                    aria-label={`Connect on ${platform}`}
-                  >
-                    <img
-                      src={`https://api.iconify.design/simple-icons:${platform}.svg?color=ffffff`}
-                      alt={platform}
-                      className="w-5 h-5"
-                    />
-                  </a>
-                ))}
+                {["facebook", "linkedin", "whatsapp", "instagram"].map(
+                  (platform) => (
+                    <a
+                      key={platform}
+                      href={socialLinks[platform]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-[#D37466] rounded-full hover:bg-[#D0B59A] transition-colors"
+                      aria-label={`Connect on ${platform}`}
+                    >
+                      <img
+                        src={`https://api.iconify.design/simple-icons:${platform}.svg?color=white`}
+                        alt={platform}
+                        className="w-5 h-5"
+                      />
+                    </a>
+                  )
+                )}
               </div>
             </div>
           </div>
@@ -142,7 +153,7 @@ export const Contact = () => {
                     name="name"
                     id="name"
                     required
-                    className="w-full p-3 bg-zinc-900 border border-zinc-800 rounded-md focus:outline-none focus:border-white text-white"
+                    className="w-full p-3 bg-zinc-900 border !border-[#D37466] !rounded-xl  !text-[#D0B59A]"
                     placeholder="Tu nombre"
                   />
                 </div>
@@ -158,7 +169,7 @@ export const Contact = () => {
                     name="email"
                     id="email"
                     required
-                    className="w-full p-3 bg-zinc-900 border border-zinc-800 rounded-md focus:outline-none focus:border-white text-white"
+                    className="w-full p-3 bg-zinc-900 border !border-[#D37466] !rounded-xl !text-[#D0B59A]"
                     placeholder="Tu email"
                   />
                 </div>
@@ -175,7 +186,7 @@ export const Contact = () => {
                   name="subject"
                   id="subject"
                   required
-                  className="w-full p-3 bg-zinc-900 border border-zinc-800 rounded-md focus:outline-none focus:border-white text-white"
+                  className="w-full p-3 bg-zinc-900 border !border-[#D37466] !rounded-xl !text-[#D0B59A]"
                   placeholder="Asunto"
                 />
               </div>
@@ -191,24 +202,28 @@ export const Contact = () => {
                   id="message"
                   rows={5}
                   required
-                  className="w-full p-3 bg-zinc-900 border border-zinc-800 rounded-md focus:outline-none focus:border-white text-white resize-none"
+                  className="w-full p-3 bg-zinc-900 border !border-[#D37466] !rounded-xl !text-[#D0B59A] resize-none"
                   placeholder="Tu mensaje aquí"
                 ></textarea>
               </div>
+
+              <div className="mb-4 mt-4">
+                <ReCAPTCHA
+                  sitekey={SITE_KEY}
+                  size="invisible"
+                  ref={recaptchaRef}
+                  badge="inline"
+                />
+              </div>
+
               <button
                 type="submit"
                 disabled={sending}
                 className="!px-8 py-3 !bg-[#D37466] text-white font-medium !rounded-full hover:bg-gray-200 transition-colors flex items-center gap-2"
               >
-                {sending ? "Sending..." : "Enviar Mensaje"} <SendIcon size={16} />
+                {sending ? "Sending..." : "Enviar Mensaje"}{" "}
+                <SendIcon size={16} />
               </button>
-
-              <ReCAPTCHA
-                sitekey={SITE_KEY}
-                size="invisible"
-                ref={recaptchaRef}
-                badge="bottomright"
-              />
 
               {error && <p className="text-red-500">{error}</p>}
               {success && (

@@ -48,9 +48,9 @@ const App = () => {
                 <Navbar />
                 <main className="w-full">
                   <Hero />
-                  <Skills />
-                  <Projects />
+                  <Skills />    
                   <About />
+                     <Projects />
                   <Contact />
                 </main>
                 <Footer />

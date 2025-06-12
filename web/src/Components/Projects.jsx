@@ -77,15 +77,14 @@ export const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="!py-20 bg-black w-full">
+    <section id="projects" className="!py-20 bg-[#F2E1D0] w-full">
       <div className="container mx-auto px-6">
         <div className="mb-16 text-center">
           <h2 className="!text-3xl !md:text-5xl !font-bold !mb-4">
-            Featured Projects
+            Blog
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            A selection of my recent work showcasing my skills and passion for
-            creating innovative digital solutions.
+            Encuentra recursos gratuitos, para ayudar a ti y a tu familia
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 py-4">
