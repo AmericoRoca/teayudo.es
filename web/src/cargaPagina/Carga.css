@@ -1,0 +1,64 @@
+
+
+.carga-container {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  z-index: 9999;
+  inset: 0;
+}
+
+.carga-svg {
+  width: min(80%, 400px); /* Se adapta sin media queries */
+  height: auto;
+}
+
+
+
+/* Móviles pequeños (260px - 500px) */
+@media (min-width: 260px) and (max-width: 500px) {
+  .carga-svg {
+    width: 95%;
+    height: auto;
+  }
+
+    .carga-container{
+    height: auto;
+    width: auto;
+  }
+}
+
+/* Teléfonos grandes y tablets pequeñas (500px - 768px) */
+@media (min-width: 501px) and (max-width: 768px) {
+  .carga-svg {
+    width: 90%;
+    height: auto;
+  }
+
+  .carga-container{
+    height: auto;
+    width: auto;
+  }
+}
+
+/* Tablets medianas (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .carga-svg {
+    width: 85%;
+    height: auto;
+  }
+}
+
+/* Pantallas grandes (más de 1025px) */
+@media (min-width: 1025px) {
+  .carga-svg {
+    width: 85%;
+    height: auto;
+  }
+}
